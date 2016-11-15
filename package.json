@@ -1,5 +1,5 @@
 {
-  "name": "atomicTimer",
+  "name": "rbxTimer",
   "version": "1.0.0",
   "description": "A minimal and simplistic Timer app to shutdown PC in given time.",
   "main": "main.js",
@@ -8,13 +8,13 @@
   },
   "repository": "https://github.com/roobyx/",
   "keywords": [
-	"atomicTimer",
+	"rbxTimer",
     "Electron",
     "timer",
 	"shutdown"
   ],
   "author": "Marian Radev",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^1.4.1"
   }
