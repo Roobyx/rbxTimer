@@ -11,3 +11,5 @@ Current functionality:
 - Add Sleep/Hibernate.
 - Add Custom tasks.
 - Add "alarm".
+- Export executable.
+- Expand to Mac and Linux.
