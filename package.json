@@ -1,0 +1,21 @@
+{
+  "name": "atomicTimer",
+  "version": "1.0.0",
+  "description": "A minimal and simplistic Timer app to shutdown PC in given time.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/roobyx/",
+  "keywords": [
+	"atomicTimer",
+    "Electron",
+    "timer",
+	"shutdown"
+  ],
+  "author": "Marian Radev",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}

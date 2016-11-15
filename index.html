@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CountDown!</title>
+		<link rel="stylesheet" href="style/global.css">
+	</head>
+	<body>
+
+		<div id='userInputs' class='row'>
+			<input type='text' class='userDD' placeholder='00' />
+			<div class="timerSeparator"></div>
+			<input type='text' class='userHH' placeholder='00' />
+			<div class="timerSeparator"></div>
+			<input type='text' class='userMM' placeholder='00' />
+			<div class="timerSeparator"></div>
+			<input type='text' class='userSS' placeholder='00' />
+		</div>
+
+		<div class="row startButtonRow">
+			<button onClick='startCD()' class='button normalBtn'> Set </button>
+		</div>
+
+
+		<div id='clockdiv' class='row'>
+			<div class='clockElement'>
+				<span class="clockTime days">0</span>
+			</div>
+			<div class='clockElement'>
+				<span class="clockTime hours">00</span>
+			</div>
+
+			<div class='clockElement'>
+				<span class="clockTime minutes">00</span>
+			</div>
+
+			<div class='clockElement'>
+				<span class="clockTime seconds">00</span>
+			</div>
+		</div>
+
+		<div class='clockLabelRow row'>
+			<div class='clockElement'>
+				<div class='clockLabel'> Days</div>
+			</div>
+			<div class='clockElement'>
+				<div class='clockLabel'> Hours</div>
+			</div>
+
+			<div class='clockElement'>
+				<div class='clockLabel'> Minutes</div>
+			</div>
+
+			<div class='clockElement'>
+				<div class='clockLabel'> Seconds</div>
+			</div>
+		</div>
+
+		<button id="closeBtn" class='button'>x</button>
+	</body>
+
+	<script type="text/javascript" src='js/timer.js'>
+
+	</script>
+	<script>
+
+		// require('js/renderer.js')
+		console.log(userOS)
+	</script>
+</html>
