@@ -1,0 +1,42 @@
+// output: ../index.html, pretty:false
+
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		title CountDown!
+		link(rel='stylesheet', href='style/css/global.css')
+	body
+		#userInputs.row
+			input.userDD(type='text', placeholder='00')
+			.timerSeparator
+			input.userHH(type='text', placeholder='00')
+			.timerSeparator
+			input.userMM(type='text', placeholder='00')
+			.timerSeparator
+			input.userSS(type='text', placeholder='00')
+		.row.startButtonRow
+			button.button.normalBtn(onclick='startCD()')  Shutdown
+		#clockdiv.row
+			.clockElement
+				span.clockTime.days 0
+			.clockElement
+				span.clockTime.hours 00
+			.clockElement
+				span.clockTime.minutes 00
+			.clockElement
+				span.clockTime.seconds 00
+		.clockLabelRow.row
+			.clockElement
+				.clockLabel  Days
+			.clockElement
+				.clockLabel  Hours
+			.clockElement
+				.clockLabel  Minutes
+			.clockElement
+				.clockLabel  Seconds
+		button#closeBtn.button x
+	script(type='text/javascript', src='js/timer.js')
+	script.
+		// require('js/renderer.js')
+		console.log(userOS)

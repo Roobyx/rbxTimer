@@ -1,0 +1,93 @@
+// compileCompressed: ../css/global.css
+
+//colors
+$color_romance_approx: #fdfdfd;
+$black: #000;
+$white: #fff;
+$color_viking_approx: #52c0da;
+$color_havelock_blue_approx: #4c8cc9;
+
+//fonts
+$mainFont: sans-serif;
+
+//urls
+$url_0: url('../../imgs/bg.jpg');
+
+body {
+	background-image: $url_0;
+	background-position: 0 10%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: $mainFont;
+}
+input {
+	border: 0;
+	width: 50px;
+	font-size: 24px;
+	text-align: center;
+	background-color: $color_romance_approx;
+}
+.row {
+	width: 100%;
+	display: block;
+}
+.timerSeparator {
+	width: 10px;
+	height: 100%;
+	font-size: 24px;
+	text-align: center;
+	display: inline-block;
+}
+.timerSeparator::after {
+	content: ':';
+	color: $black;
+}
+#userInputs {
+	margin: 50px 0 0;
+	text-align: center;
+}
+.startButtonRow {
+	text-align: center;
+	margin: 20px 0 50px;
+}
+.button {
+	border: 0;
+	color: $white;
+	padding: 5px 20px;
+	cursor: pointer;
+	&:hover {
+		opacity: .8;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.normalBtn {
+	background-color: $color_viking_approx;
+}
+#closeBtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: $black;
+}
+#clockdiv {
+	font-size: 24px;
+	text-align: center;
+}
+.clockLabelRow {
+	font-size: 24px;
+	text-align: center;
+}
+.clockLabel {
+	display: inline-block;
+}
+.clockTime {
+	display: inline-block;
+	color: $color_havelock_blue_approx;
+}
+.clockElement {
+	display: inline-block;
+	width: 25%;
+	float: left;
+}
