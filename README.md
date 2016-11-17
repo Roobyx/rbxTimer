@@ -8,7 +8,7 @@ Current functionality:
 - Shutdown windows PC after given time (up to days)
 
 
-![ElectonTimer](https://i.gyazo.com/46366d6062f1d4e2a07966e85e8c4bf3.png)
+![ElectonTimer](https://i.gyazo.com/a3251e6bf2f34dadbbfc62b8c5ca1d99.png)
 
 
 ##TODO:
