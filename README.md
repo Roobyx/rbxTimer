@@ -15,7 +15,9 @@ Current functionality is to perform windows actions after given time (up to days
 
 
 ##TODO:
+- Add progress bar
 - Add Custom tasks.
 - Add "alarm".
+- Add presets
 - Export executable.
 - Expand to Mac and Linux.
