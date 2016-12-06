@@ -21,3 +21,8 @@ Current functionality is to perform windows actions after given time (up to days
 - Add presets
 - Export executable.
 - Expand to Mac and Linux.
+
+
+## YOUR HELP
+The app still needs a cool name so suggetions are welcome !
+New functionallity ideas are also appriciated !
