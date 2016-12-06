@@ -4,15 +4,17 @@ Set your PC to shutdown in given time.
 
 Experimental app built with Electron.
 
-Current functionality:
-- Shutdown windows PC after given time (up to days)
+Current functionality is to perform windows actions after given time (up to days)
+- Shutdown
+- Sleep
+- Restart
+- Hibernate (on machines that have "Hibernation" enabled, if not the system will be sleeped)
 
 
-![ElectonTimer](https://i.gyazo.com/a3251e6bf2f34dadbbfc62b8c5ca1d99.png)
+![ElectonTimer](https://i.gyazo.com/798cb545673a2438b5bb9e43c8ab82a7.png)
 
 
 ##TODO:
-- Add Sleep/Hibernate.
 - Add Custom tasks.
 - Add "alarm".
 - Export executable.
