@@ -1,7 +1,7 @@
 {
   "name": "rbxTimer",
-  "version": "1.0.0",
-  "description": "A minimal and simplistic Timer app to shutdown PC in given time.",
+  "version": "1.1.0",
+  "description": "A minimal and simplistic Timer app to execute windows actions PC in given time.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
