@@ -15,8 +15,19 @@ html
 			input.userMM(type='text', placeholder='00')
 			.timerSeparator
 			input.userSS(type='text', placeholder='00')
+
 		.row.startButtonRow
-			button.button.normalBtn(onclick='startCD()')  Shutdown
+			h3 Select action:
+
+			select.winActionSelect
+				option(value='shutdown') Shutdown
+				option(value='sleep') Sleep
+				option(value='hibernate') Hibernate
+				option(value='restart') Restart
+
+		.row.startButtonRow
+			button.button.normalBtn.shutDownBtn(onclick='startCD()')  Start
+
 		#clockdiv.row
 			.clockElement
 				span.clockTime.days 0
@@ -39,4 +50,4 @@ html
 	script(type='text/javascript', src='js/timer.js')
 	script.
 		// require('js/renderer.js')
-		console.log(userOS)
+		//- console.log(userOS)

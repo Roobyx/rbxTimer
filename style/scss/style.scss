@@ -27,6 +27,23 @@ input {
 	text-align: center;
 	background-color: $color_romance_approx;
 }
+
+select {
+	border: 0;
+	padding: 10px;
+	outline: 0px;
+
+	option {
+		outline: 0px;
+		height: 10px;
+	}
+}
+
+.disabled {
+	opacity: .7;
+	pointer-events: none;
+}
+
 .row {
 	width: 100%;
 	display: block;
@@ -62,6 +79,7 @@ input {
 		outline: none;
 	}
 }
+
 .normalBtn {
 	background-color: $color_viking_approx;
 }

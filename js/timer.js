@@ -1,11 +1,14 @@
 // You can also require other files to run in this process
 console.log('timer.js loaded')
-let userOS = process.platform
+// let userOS = process.platform
 
 const path = require('path')
 const remote = require('electron').remote
 
-let batFile = path.dirname(require.main.filename) + '\\bats\\shutdown.bat'
+let batFileShutdown = path.dirname(require.main.filename) + '\\bats\\shutdown.bat'
+let batFileSleep = path.dirname(require.main.filename) + '\\bats\\sleep.bat'
+let batFileHibernate = path.dirname(require.main.filename) + '\\bats\\hibernate.bat'
+let batFileRestart = path.dirname(require.main.filename) + '\\bats\\restart.bat'
 // console.log('curr dir: ' + batFile )
 // let batFile = "C:/code/m/electron/electron-quick-start/shutdown.bat"
 
@@ -45,7 +48,34 @@ function initializeclock(id, endtime) {
 		if(time.total <= 0) {
 			clearInterval(timeinterval)
 			console.log('clearing')
-			spawn('cmd.exe', ['/c', batFile])
+			let winAction = document.querySelector('.winActionSelect').value;
+
+			if(winAction === 'sleep') {
+
+				spawn('cmd.exe', ['/c', batFileSleep])
+
+			} else if(winAction === 'shutdown') {
+
+				spawn('cmd.exe', ['/c', batFileShutdown])
+
+			} else if(winAction === 'restart') {
+
+				spawn('cmd.exe', ['/c', batFileRestart])
+
+			} else {
+
+				spawn('cmd.exe', ['/c', batFileHibernate])
+
+				console.log('Should Hibernate')
+
+				setTimeout(function () {
+					console.log('Hibernate is disabled, going to sleep')
+
+					spawn('cmd.exe', ['/c', batFileSleep])
+				}, 1000);
+			}
+
+			document.querySelector('.shutDownBtn').classList.toggle('disabled')
 			// console.log(batFile)
 		}
 	}
@@ -60,16 +90,18 @@ let startCD = function() {
 		userMM = (document.querySelector('.userMM').value * 60000),
 		userSS = (document.querySelector('.userSS').value * 1000),
 		totalMiliseconds = userDD + userHH + userMM + userSS
-		console.log('Miisecs: ', totalMiliseconds )
+		// console.log('Miisecs: ', totalMiliseconds )
 		deadline = new Date(Date.parse(new Date()) + totalMiliseconds)
 
+		// Disable the shutdown button to avoid second activation of the timer
+		document.querySelector('.shutDownBtn').classList.toggle('disabled')
 
-	console.log('DD: ', userDD)
-	console.log('HH: ', userHH)
-	console.log('MM: ', userMM)
-	console.log('SS: ', userSS)
+	// console.log('DD: ', userDD)
+	// console.log('HH: ', userHH)
+	// console.log('MM: ', userMM)
+	// console.log('SS: ', userSS)
 
-	console.log('Deadline: ', deadline)
+	// console.log('Deadline: ', deadline)
 	initializeclock('clockdiv', deadline)
 }
 
