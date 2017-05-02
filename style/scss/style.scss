@@ -1,4 +1,4 @@
-// compileCompressed: ../css/global.css
+// node-sass --output-style compressed ./style/scss -o ./style/css -w
 
 //colors
 $color_romance_approx: #fdfdfd;
@@ -11,10 +11,10 @@ $color_havelock_blue_approx: #4c8cc9;
 $mainFont: sans-serif;
 
 //urls
-$url_0: url('../../imgs/bg.jpg');
+$backgroundImg: url('../../imgs/bg.jpg');
 
 body {
-	background-image: $url_0;
+	background-image: $backgroundImg;
 	background-position: 0 10%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -37,6 +37,10 @@ select {
 		outline: 0px;
 		height: 10px;
 	}
+}
+
+.winActionSelect {
+	 border: 1px solid rgba(0,0,0, .1);
 }
 
 .disabled {
@@ -66,6 +70,11 @@ select {
 .startButtonRow {
 	text-align: center;
 	margin: 20px 0 50px;
+
+	button {
+		padding: 20px 30px;
+		font-size: 20px;
+	}
 }
 .button {
 	border: 0;
@@ -84,16 +93,30 @@ select {
 	background-color: $color_viking_approx;
 }
 #closeBtn {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+	position: fixed;
+	top: 5px;
+	right: 0px;
+	background-color: transparent;
 	color: $black;
+	z-index: 50;
 }
 #clockdiv {
-	font-size: 24px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	padding: 20px 0;
+	bottom: 48px;
+	background-color: rgba(255,255,255, .7);
+	font-size: 38px;
 	text-align: center;
 }
 .clockLabelRow {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom:0;
+	padding: 10px 0;
+	background-color: rgba(255,255,255, .7);
 	font-size: 24px;
 	text-align: center;
 }
@@ -108,4 +131,32 @@ select {
 	display: inline-block;
 	width: 25%;
 	float: left;
+}
+
+.presets {
+	position: fixed;
+	top: 20px;
+	left: 10px;
+	width: 80px;
+
+	.clockElement {
+		text-align: center;	
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	button {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
+
+.drag-handle {
+	position: fixed;
+	top: 0;
+	right: 50px;
+	left: 0;
+	height: 20px;
+	-webkit-app-region: drag;
+	z-index: 10;
 }

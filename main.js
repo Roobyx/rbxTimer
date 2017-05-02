@@ -15,7 +15,9 @@ function createWindow () {
 			width: 700,
 			height: 500,
 			transparent: false,
-			frame: false
+			frame: false,
+      resizable: false,
+      movable: true
 		}
 	)
 
@@ -24,7 +26,7 @@ function createWindow () {
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

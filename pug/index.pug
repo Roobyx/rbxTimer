@@ -1,12 +1,15 @@
-// output: ../index.html, pretty:false
+//- output: ../index.html, pretty:false
+//- pug index.pug -o ../ -w
 
 doctype html
 html
 	head
 		meta(charset='UTF-8')
 		title CountDown!
-		link(rel='stylesheet', href='style/css/global.css')
+		link(rel='stylesheet', href='style/css/style.css')
 	body
+		.drag-handle
+		
 		#userInputs.row
 			input.userDD(type='text', placeholder='00')
 			.timerSeparator
@@ -46,6 +49,22 @@ html
 				.clockLabel  Minutes
 			.clockElement
 				.clockLabel  Seconds
+
+
+		.presets
+			.clockElement
+				.clockLabel Presets:
+			
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("MM", 5)')   5 min
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("MM", 10)')  10 min
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("MM", 15)')  15 min
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("MM", 20)')  20 min
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("MM", 30)')  30 min
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("HH", 1)')   1 h
+			button.button.normalBtn.shutDownBtn(onclick='presetStart("HH", 2)')   2 h
+			
+			
+
 		button#closeBtn.button x
 	script(type='text/javascript', src='js/timer.js')
 	script.

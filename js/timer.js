@@ -84,6 +84,17 @@ function initializeclock(id, endtime) {
 	let timeinterval = setInterval(updateClock, 1000)
 }
 
+let timeTypes = ['SS', 'MM', 'HH', 'DD'];
+
+let presetStart = function(timeType, presetTime) {
+	
+	timeTypes.forEach(function(element) {
+		(document.querySelector('.user' + element).value = 00)		
+	});
+
+	(document.querySelector('.user' + timeType).value = presetTime)
+}
+
 let startCD = function() {
 	let userDD = (document.querySelector('.userDD').value * 24 * 60 * 60 * 1000),
 		userHH = (document.querySelector('.userHH').value * 3600000),
